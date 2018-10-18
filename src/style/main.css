@@ -1,0 +1,22 @@
+.column {
+    width: 33%;
+    max-height: 750px;
+    height: relative;
+    overflow: scroll;
+    float: left;
+}
+
+#antelope {
+    float: left;
+    margin-right: 25px;
+}
+
+#header {
+    float:center;
+    padding: 10px 10px 10px 25px;
+}
+
+#bio {
+    float:left;
+    padding: 25px 25px 25px 25px;
+}
