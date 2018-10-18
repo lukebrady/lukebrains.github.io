@@ -6,7 +6,8 @@
     <!--<meta name="keywords" content="HTML,CSS,XML,JavaScript">-->
     <meta name="author" content="Luke Brady">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="src/style/main.css"
+    <link rel="stylesheet" type="text/css" href="src/style/main.css"/>
+    <title>Luke Brady</title>
 </head>
 <body>
     <!--- Header Section -->
@@ -55,6 +56,12 @@
                     their audio.
                     </td>
                 </tr>
+                <tr>
+                    <td><a href = "http://pgp.mit.edu/pks/lookup?op=get&search=0xCA92F154B9D36AA1"><i>PGP Key</i></a> - 
+                    If you would like to send me an email, please encrypt the message with my PGP key hosted
+                    on MIT's PGP keychain server.
+                    </td>
+                </tr>
             </table>
         </div>
     </section>
@@ -65,10 +72,10 @@
                 var repoTable = document.getElementById("repoTable");
                 var repoJSON = JSON.parse(this.responseText);
                 repoJSON.forEach(function(repo) {
-                    // Add the repos to the repo table.
-                    repoTable.innerHTML += "<tr>";
-                    repoTable.innerHTML = "<td>" + repo.full_name + "</td>";
-                    repoTable.innerHTML += "</tr>";
+                    if(repo.fork != "True") {
+                        // Add the repos to the repo table.
+                        repoTable.innerHTML += "<tr><td><p>" + repo.full_name + "</p></td></tr>";
+                    }
                 }, this);
             }
         }
