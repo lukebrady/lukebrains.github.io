@@ -18,7 +18,7 @@
     </section>
     <!--- Bio section -->
     <section id = "bio">
-        <h3>Welcome to my personal website! It is great to have you here.</h3>
+        <h3>Welcome to my personal website. It is great to have you here!</h3>
         <p>This website is dedicated to talking about a plethora of topics
             such as projects I am working on or just random things that happen to be on my mind.
             I encourage you to take a look around this website and let me know where I can make
@@ -35,8 +35,7 @@
     <section id = "projects">
         <div class = "column" id = "projectColumn">
             <h3>Current Projects</h3>
-            <table id = "repoTable">
-            </table>
+            <div name = "rtable" id = "rtable"></div>
         </div>
         <div class = "column" id = "learningsColumn">
             <h3>New Learnings</h3>
@@ -66,15 +65,26 @@
         </div>
     </section>
     <script>
+        var repoTable = document.getElementById("rtable");
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
-            if(this.readyState == 4 && this.response == 200) {
-                var repoTable = document.getElementById("repoTable");
+            if(this.readyState == 4 && this.status == 200) {
                 var repoJSON = JSON.parse(this.responseText);
                 repoJSON.forEach(function(repo) {
                     if(repo.fork != "True") {
                         // Add the repos to the repo table.
-                        repoTable.innerHTML += "<tr><td><p>" + repo.full_name + "</p></td></tr>";
+                        repoTable.innerHTML += "<a href=\""
+                                            +  repo.html_url
+                                            + "\"><i>" 
+                                            + repo.full_name
+                                            + "</i></a>"
+                                            + "<p>"
+                                            + repo.description
+                                            + "</p>"
+                                            + "<p>Git URL: " + repo.git_url +"</p>" 
+                                            + "<p>Last Updated: "
+                                            + repo.pushed_at
+                                            + "</p><hr>";
                     }
                 }, this);
             }
