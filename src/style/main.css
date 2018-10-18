@@ -1,5 +1,5 @@
 .column {
-    width: 33.33%;
+    width: 31%;
     max-height: 750px;
     height: relative;
     overflow: scroll;
@@ -23,4 +23,12 @@
 
 #projects {
     margin: 25px 25px 25px 25px;
+}
+
+#projectColumn {
+    padding-right: 2.5%;
+}
+
+#linksColumn {
+    padding-left: 2.5%;
 }
