@@ -11,7 +11,7 @@
 <body>
     <!--- Header Section -->
     <section id = "header">
-        <a href = "https://commons.wikimedia.org/wiki/File:Antelope_1_(PSF).png"><img src = "src/images/antelope.png" id = "antelope"/></a>
+        <a title="By Pearson Scott Foresman [Public domain], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Antelope_1_(PSF).png"><img width="85" id = "antelope" alt="Antelope 1 (PSF)" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Antelope_1_%28PSF%29.png/256px-Antelope_1_%28PSF%29.png"></a>
         <h1>Luke Brady</h1>
         <i>A passionate software and systems engineer.</i>
     </section>
@@ -34,7 +34,6 @@
     <section id = "projects">
         <div class = "column" id = "projectColumn">
             <h3>Current Projects</h3>
-            <p id = "repo"></p>
             <table id = "repoTable">
             </table>
         </div>
@@ -48,12 +47,12 @@
                     <td><a href = "https://www.linkedin.com/in/luke-brady-abb110a6/"><i>LinkedIn</i></a> - I have a LinkedIn if you would like to connect.</td>
                 </tr>
                 <tr>
-                    <td><a href = "https://www.linkedin.com/in/luke-brady-abb110a6/"><i>GitHub</i></a> - I commit all of my open source code to GitHub.</td>
+                    <td><a href = "https://github.com/lukebrains"><i>GitHub</i></a> - I commit all of my open source code to GitHub.</td>
                 </tr>
                 <tr>
                     <td><a href = "https://pageling.io"><i>Pageling.io</i></a> - 
-                    Pageling is a free and open source service I am working on to make it easier for Podcast creators to transcribe
-                    their shows audio.
+                    Pageling is a free and open source service I am working on to make it easier for podcast creators to transcribe
+                    their audio.
                     </td>
                 </tr>
             </table>
@@ -68,7 +67,7 @@
                 repoJSON.forEach(function(repo) {
                     // Add the repos to the repo table.
                     repoTable.innerHTML += "<tr>";
-                    repoTable.innerHTML += "<td><p>" + repo.full_name + "</p></td>";
+                    repoTable.innerHTML = "<td>" + repo.full_name + "</td>";
                     repoTable.innerHTML += "</tr>";
                 }, this);
             }

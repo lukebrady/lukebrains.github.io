@@ -1,5 +1,5 @@
 .column {
-    width: 33%;
+    width: 33.33%;
     max-height: 750px;
     height: relative;
     overflow: scroll;
@@ -19,4 +19,8 @@
 #bio {
     float:left;
     padding: 25px 25px 25px 25px;
+}
+
+#projects {
+    margin: 25px 25px 25px 25px;
 }
