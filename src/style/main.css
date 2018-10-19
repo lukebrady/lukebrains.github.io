@@ -6,6 +6,10 @@
     float: left;
 }
 
+.sec {
+    margin: 25px 25px 25px 25px;    
+}
+
 #antelope {
     float: left;
     margin-right: 25px;
@@ -22,7 +26,12 @@
 }
 
 #projects {
-    margin: 25px 25px 25px 25px;
+    margin: 0px 25px 25px 25px;
+    float:left;
+}
+
+#donations {
+    float:left;
 }
 
 #projectColumn {
@@ -31,4 +40,12 @@
 
 #linksColumn {
     padding-left: 2.5%;
+}
+
+#donationCol1 {
+    width: 50%;
+}
+
+#donationCol2 {
+    width: 50%;
 }

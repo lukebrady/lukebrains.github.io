@@ -30,6 +30,7 @@
             <li><i>Who is this guy?</i></li>
             <li><i>Why does this website look like it came from the 90s?</i></li>
             <li><i>Why should I care about his open-source projects?</i></li>
+        </ol>
     </section>
     <!---Project Section -->
     <section id = "projects">
@@ -51,12 +52,18 @@
                     <td><a href = "https://www.linkedin.com/in/luke-brady-abb110a6/"><i>LinkedIn</i></a> - I have a LinkedIn if you would like to connect.</td>
                 </tr>
                 <tr>
-                    <td><a href = "https://github.com/lukebrains"><i>GitHub</i></a> - I commit all of my open source code to GitHub.</td>
+                    <td><a href = "https://github.com/lukebrains"><i>GitHub</i></a> - I commit all of my code to GitHub.</td>
                 </tr>
                 <tr>
-                    <td><a href = "https://pageling.io"><i>Pageling.io</i></a> - 
-                    Pageling is a free and open source service I am working on to make it easier for podcast creators to transcribe
+                    <td><a href = "https://pageling.io"><i>Pageling</i></a> - 
+                    Pageling is a free and open source service I am working on to make it easier (and cheaper) for podcast creators to transcribe
                     their audio.
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href = "https://www.digitalascension.net"><i>Digital Ascension</i></a> - 
+                    Digital Ascension is a technology consulting company I have started on the side. 
+                    We specialize in cloud infrastructure and open source software.
                     </td>
                 </tr>
                 <tr>
@@ -68,6 +75,18 @@
             </table>
         </div>
     </section>
+    <!--- Donation Section -->
+    <section id = "donations" class = "sec">
+        <div id = "donationCol1">
+            <h3>Make a donation</h3>
+            <p>If you would like to support the work I am doing, consider making a donation.
+            This money will go towards software, server, and maintenance costs. 
+            <br/><br/><b>I cannot do this without you.</b>
+            </p>
+        </div>
+        <div id = "donationCol2">
+        </div>
+    </section>
     <script>
         var repoTable = document.getElementById("rtable");
         var xhttp = new XMLHttpRequest();
@@ -75,7 +94,7 @@
             if(this.readyState == 4 && this.status == 200) {
                 var repoJSON = JSON.parse(this.responseText);
                 repoJSON.forEach(function(repo) {
-                    if(repo.fork != "True") {
+                    if(repo.fork != true) {
                         // Add the repos to the repo table.
                         repoTable.innerHTML += "<a href=\""
                                             +  repo.html_url
